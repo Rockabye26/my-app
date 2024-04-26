@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        min-height: 100vh;
+        background: url("sampbg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-size: 22px;
+        color: black;
+      }
+
+      .main-nav {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      h2,
+      h3,
+      a {
+        color: #34495e;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .log {
+        padding-left: 10px;
+        padding-top: 5px;
+        margin-top: -25px;
+        position: fixed;
+      }
+
+      .logo {
+        margin: 0;
+        font-size: 1.45em;
+      }
+
+      .main-nav a {
+        padding: 10px 15px;
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+        color: #34495e;
+        font-size: 0.99em;
+      }
+
+      .main-nav a:hover {
+        color: #718daa;
+      }
+
+      .header {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        border: 1px solid #a2a2a2;
+        background-color: #f4f4f4;
+        -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      @media (min-width: 0px) {
+        .header,
+        .main-nav {
+          display: flex;
+        }
+
+        .header {
+          flex-direction: column;
+          align-items: center;
+
+          .header {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1150px;
+          }
+        }
+      }
+
+      @media (min-width: 0px) {
+        .header {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            color: white;
+            margin-top: 110px;
+            text-shadow: 2px 5px rgba(0, 0, 0, 0.797);
+        }
+
+        fieldset {
+            background-color: rgba(255, 255, 255, 0.577);
+            margin-left: 36.5%;
+            margin-right: 36.5%;
+            margin-top: 3%;
+        }
+
+        legend {
+            font-size: large;
+            background-color: rgba(0, 0, 0, 0.753);
+            color: white;
+            border-radius: 50px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="password"]{
+            background-color: rgba(0, 0, 0, 0.477);
+            color: white;
+        }
+
+        button {
+            background-color: rgb(0, 0, 0);
+            border-radius: 50px;
+            width: 100px;
+            color: white;
+            font-size: 20px;
+            margin: auto;
+            margin-bottom: 30px;
+            box-shadow: 2px 5px rgba(0, 0, 0, 0.597);
+            border: solid black 2px;
+        }
+
+        #a1 {
+            font-size: 15px;
+            margin-left: 80px;
+            color: white;
+        }
+    </style>
+    <script>
+            function createAcc() {
+                var email = document.getElementById("em").value;
+                var password = document.getElementById("pass").value;
+                var confirmPassword = document.getElementById("cpass").value;
+                var number = document.getElementById("num").value;
+
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                var passwordRegex = /^[A-za-z0-9_@#$%!&*]{8,}$/;
+                var usernameRegex = /^[a-zA-Z][a-zA-Z0-9_-]{2,19}$/;
+                var numberRegex = /^[0-9]{10}$/;
+
+                if (!numberRegex.test(number)) {
+                    alert("Please enter a valid contact number.");
+                    return false;
+                }
+                if (!emailRegex.test(email)) {
+                    alert("Please enter a valid email address.");
+                    return false;
+                }
+                if (!passwordRegex.test(password)) {
+                    alert("Password must be at least 8 characters long and contain at least one lowercase letter, one uppercase letter, and one digit.");
+                    return false;
+                }
+                if (password !== confirmPassword) {
+                    alert("Passwords do not match.");
+                    return false;
+                }
+                alert("Account creation successful! Go to Sign in Page.")
+                return true;
+            }
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo">
+            <a href="Landing Page.html"><img src="geogoo.png" height="40vh" class="log" /></a>
+        </h1>
+        <ul class="main-nav">
+            <li><a href="Home Page.html">Home</a></li>
+            <li><a href="Sign In form.html">Sign in</a></li>
+            <li><a href="Sign Up Form.html">Sign Up</a></li>
+            <li><a href="Registration Form.html">Register</a></li>
+            <li><a href="QuizPage.js">Quiz</a></li>
+            <li><a href="FeedbackForm.html">Feedback</a></li>
+        </ul>
+    </header>
+    <h1><u>SIGN-UP FORM</u></h1>
+    <form action="">
+        <fieldset>
+            <legend>
+                <pre>Personal Information</pre>
+            </legend>
+            <br>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required><br><br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required><br><br>
+            <label for="dateOfBirth">Date of Birth:</label>
+            <input type="date" name="dateOfBirth" id="dateOfBirth" required><br><br>
+            <label for="num">Contact Number:</label>
+            <input type="text" id="num" name="num" required><br><br>
+
+        </fieldset>
+        <fieldset>
+            <legend>
+                <pre>Login Information</pre>
+            </legend>
+            <br>
+            <label for="em">Email:</label>
+            <input type="text" id="em" name="em"><br><br>
+            <label for="pass">New Password:</label>
+            <input type="password" name="pass" id="pass"><br><br>
+            <label for="cpass">Confirm Password:</label>
+            <input type="password" name="cpass" id="cpass"><br><br>
+            <button onclick=createAcc()>Submit</button>
+            <a href="Sign In form.html" id="a1">Already a user? Sign in</a>
+        </fieldset>
+        <br/><br/>
+    </form>
+</body>
+
+</html>

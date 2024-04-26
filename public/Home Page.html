@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        
+    * {
+	    box-sizing: border-box;
+    }
+    body {
+	    font-family: 'Montserrat', sans-serif;
+	    line-height: 1.6;
+	    margin: 0;
+	    min-height: 100vh;
+        background: url("sampbg.jpg");
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-attachment: fixed;
+        font-size: 22px;
+        color: white;
+    }
+    .main-nav {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    h2,h3,a {
+	    color: #34495e;
+    }
+    a {
+	    text-decoration: none;
+    }
+    .log {
+        padding-left: 10px;
+        padding-top: 5px;
+        margin-top: -25px;
+        position: fixed;
+    }
+    .logo {
+	    margin: 0;
+	    font-size: 1.45em;
+    }
+    .main-nav a{
+	    padding: 10px 15px;
+	    text-transform: uppercase;
+	    text-align: center;
+	    display: block;
+	    color: #34495e;
+	    font-size: .99em;
+    }
+    .main-nav a:hover {
+	    color: #718daa;
+    }
+    .header {
+	    padding-top: .5em;
+	    padding-bottom: .5em;
+	    border: 1px solid #a2a2a2;
+	    background-color: #f4f4f4;
+	    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	    -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	    -webkit-border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    border-radius: 5px;
+        position: fixed;
+        width: 100%;
+    }
+
+@media (min-width: 0px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+    	.header{
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}
+	}
+
+}
+
+@media (min-width: 0px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
+    section {
+        max-width: 90%;
+        padding: 20px;
+        margin: auto ;
+        border-radius: 8px;
+    }
+    p {
+        margin-left: 20px;
+        line-height: 40px;
+        background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        padding: 25px;
+        border-radius: 50px;
+        margin-top: 8.5%;
+    }
+    .GeoImage {
+        margin-left: 10.5%;
+        margin-top: 10%;
+    }   
+    h2 {
+        margin-left: 20px;
+        color: white;
+        margin-top: 40px;
+        text-shadow: 2px 5px rgba(0, 0, 0, 0.797) ;
+    }
+    .Triangle {
+        margin-left: 22px;
+    }
+    .Rectangle {
+        margin-left: 20px;
+    }
+    .Circle {
+        margin-left: 35px;
+    }
+    article {
+        margin-left: 10px;
+        margin-top: 30px;
+        background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        padding: 25px;
+        border-radius: 50px;
+    }
+    .shape-list, ol {
+        margin-left: 20px;
+    }
+    aside {
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    code {
+        white-space: normal;
+        display: block;
+        margin-left: 8%;
+    }
+    footer {
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        display: block;
+        justify-content: center;
+        margin: auto;
+        width: 35%;
+        background: rgba(255, 255, 255, 0.444);
+        border-radius: 50px;
+        padding: 10px;
+        border: solid black 4px;
+    }
+    .d1 {
+        display: flex;
+        justify-content: center;
+    }
+    hr {
+        margin-bottom: 100px;
+    }
+    .shape-list img:hover {
+        cursor: pointer;
+    }
+    .video-content {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.video-content h2 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.video-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .video-content h2 {
+        font-size: 28px;
+    }
+
+    .video-wrapper iframe {
+        height: 250px; /* Adjust height for smaller screens */
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo"><a href="Landing Page.html"><img src="geogoo.png" height="50vh" class="log"></a></h1>
+        <ul class="main-nav">
+                <li><a href="Home Page.html">Home</a></li>
+                <li><a href="Sign In form.html">Sign in</a></li>
+                <li><a href="Sign Up Form.html">Sign Up</a></li>
+                <li><a href="Registration Form.html">Register</a></li>
+                <li><a href="QuizPage.js">Quiz</a></li>
+                <li><a href="FeedbackForm.html">Feedback</a></li>
+        </ul>
+    </header>
+        <section>
+            <div class="d1">
+            <p>
+                <b><a href="https://en.wikipedia.org/wiki/Geometry">GEOMETRY</a></b> is one of the oldest subjects that are
+                still in existence today. It is the study of mathematics
+                that is concerned with the size, shapes, and figures of objects, as well as the qualities of space. As
+                part of their geometry instruction, pupils learn all about the fundamental shapes, their properties,
+                various formulas, areas and volumes, and many methods of sketching different shapes. However,
+                through time, it has evolved into something much more significant, and it has become an important
+                part of our everyday lives.
+            </p>
+            <img class="GeoImage" src="Geometry Intro.jpg" alt="General Geometry Elements" height="300"
+                width="465" />
+            </div>
+            <section class="video-content">
+                <div class="container">
+                    <h2>Refer to this video for better understanding of geometric shapes.</h2>
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/J-kLTQPNnPc?si=G89jYWL20R0xtpK6"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+            <h2><u>Important Geometric Shapes</u></h2>
+            <ul class="shape-list">
+                <li>
+                    <pre><b>Square</b>: Area = (Side)<sup>2</sup></pre>
+                </li>
+                <img src="Square.jpg" onclick="window.location.href = 'https://en.wikipedia.org/wiki/Square';" alt="Square" height="220" width="240" />
+                <li>
+                    <pre><b>Triangle</b>: Area = (1/2) x Base x Height</pre>
+                </li>
+                <img class="Triangle" src="Triangle.png" onclick ="window.location.href = 'https://en.wikipedia.org/wiki/Triangle';" alt="Triangle" height="200" width="200" />
+                <li>
+                    <pre><b>Rectangle</b>: Area = Length x Breadth</pre>
+                </li>
+                <img class="Rectangle" src="Rectangle.png" onclick ="window.location.href = 'https://en.wikipedia.org/wiki/Rectangle';" alt="Rectangle" height="200" width="200" />
+                <li>
+                    <pre><b>Circle</b>: Area = &pi; x (Radius)<sup>2</sup></pre>
+                </li>
+                <img class="Circle" src="Circle.png" onclick ="window.location.href = 'https://en.wikipedia.org/wiki/Circle';" alt="Circle" height="180" width="180" />
+            </ul>
+            <h2><u>Applications of Geometry in Real Life</u></h2>
+            <ol>
+                <li><b><u>
+                            <pre>Nature</pre>
+                        </u></b></li>
+                <article>
+                    One of the most significant examples of geometry in everyday life is generated by the natural environment
+                    that surrounds us. It is possible to detect geometrical designs and patterns in a variety of plant
+                    materials, including leaves, flowers, stems, roots, bark, and the list goes on and on. The fact that the
+                    human digestive system is organized like a tube within a tube confirms the importance of geometry in the
+                    system. The leaves on the trees are different in terms of their shapes, sizes, and symmetries, among other
+                    characteristics. For example, an orange is a sphere, and after peeling it, one can see how the separate
+                    slices combine to form the perfect spherical. Varied fruits and vegetables have different geometrical
+                    shapes; for example, an orange is a sphere.
+                </article>
+                <li><b><u>
+                            <pre>Technology</pre>
+                        </u></b></li>
+                <article>
+                    Modern technology is the most widespread application of geometry in everyday life. Geometry is applied to
+                    practically all of the basic concepts in almost any field, whether it be robotics, computers, or video
+                    games. Because the principles of geometry are always available to computer programmers, they are able to do
+                    their work efficiently. In video games, the virtual world is produced only because geometric computations
+                    aid in the design of the sophisticated graphics that are used in the game’s virtual environment. A 2-D map
+                    is used in the act of shooting in order to stimulate the 3-D world of video games, which is known as
+                    raycasting. Because the computations for the vertical lines on the screen are carried out for each line on
+                    the screen, raycasting helps to increase processing speed.
+                </article>
+                <li><b><u>
+                            <pre>Architecture</pre>
+                        </u></b></li>
+                <article>
+                    Geometry plays an important role in the design and construction of many different buildings and monuments.
+                    Prior to the construction of architectural forms, mathematics and geometry aid in the creation of the
+                    structural plan for the structure. The fixed characteristics of all types of architectural designs are
+                    shaped by the theories of proportions and symmetry. The “Principles of Harmony” of Pythagoras, as well as
+                    geometry, were used in the creation of architectural structures in the sixth century BC. Not only did the
+                    fundamentals of mathematics, along with geometry, contribute to the enhancement of the aesthetics, harmony,
+                    and religious significance of enormous constructions, but they also assisted in the mitigation of different
+                    hazards coming from high-speed wind conditions.
+                </article>
+                <li><b><u>
+                            <pre>Sports</pre>
+                        </u></b></li>
+                <article>
+                    Sports rarely misses an opportunity to put geometrical concepts to use in a unique situation. Geometric
+                    shapes are taken into consideration when designing the structures of sports stadiums and sporting grounds.
+                    Geometry is frequently used on athletic fields; for example, hockey, soccer, basketball, and football fields
+                    are all rectangular in design. On the field, the corner kick locations, goal posts, arcs, D-section, and
+                    centre circle have all been marked. Additionally, the pitches of numerous other sports, such as volleyball
+                    and basketball, take geometrical considerations into mind, as evidenced by the presence of oval and circular
+                    arcs that are plainly defined on the fields. When it comes to track fields, semicircular shapes are
+                    frequently observed. Angular relationships are also important in forecasting the movement of the players,
+                    improving their performance, and scoring a point.
+                </article>
+            </ol>
+            <h2><u>Using Programming to Calculate Area</u></h2>
+            <aside>
+                Programming languages provide immense support across various fields of work in today's world, including
+                Geometry.
+                For example, here is a sample Python script to calculate the area of a triangle using Heron's formula.
+            </aside>
+            <code>
+                    # Three sides of the triangle is a, b and c:  <br/>
+                    a = float(input('Enter first side: '))  <br/>
+                    b = float(input('Enter second side: '))  <br/>
+                    c = float(input('Enter third side: '))  <br/><br/>
+          
+                    # calculate the semi-perimeter  <br/>
+                    s = (a + b + c) / 2  <br/><br/>
+          
+                    # calculate the area  <br/>
+                    area = (s*(s-a)*(s-b)*(s-c)) ** 0.5  <br/>
+                    print('The area of the triangle is %0.2f' %area) <br/>
+                </code>
+            <hr>
+            <footer>
+                <span>Developed by Pratik Dawar</span>
+                <br/>
+                <span>Contact me at pratikdawar007@gmail.com</span>
+            </footer>
+        </section>
+</body>
+</html>

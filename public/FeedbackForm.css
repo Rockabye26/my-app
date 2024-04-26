@@ -1,0 +1,140 @@
+.feedback-container {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(244, 244, 244, 0.9);
+    border: 1px solid #a2a2a2;
+    border-radius: 5px;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+}
+
+.feedback-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 5px rgba(0, 0, 0, 0.797);
+    background-color: rgba(0, 0, 0, 0.674);
+    border-radius: 50px;
+    width: 300px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.477);
+    color: white;
+    border: 1px solid #a2a2a2;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border: solid black 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    min-height: 50vh;
+    background: url("sampbg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 22px;
+    color: black;
+}
+
+.header {
+    padding-top: 0.5em;
+    padding-bottom: 0em;
+    border: 1px solid #a2a2a2;
+    background-color: #f4f4f4;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header h1.logo {
+    margin: 0;
+    font-size: 1.45em;
+}
+
+.main-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -5px;
+}
+
+@media (min-width: 0px) {
+
+    .header,
+    .main-nav {
+        display: flex;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+
+        .header {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1150px;
+        }
+    }
+}
+
+@media (min-width: 0px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.main-nav a {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #34495e;
+    font-size: 0.99em;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    color: #718daa;
+}
+
+h1 {
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 5px rgba(0, 0, 0, 0.797);
+}

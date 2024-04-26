@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-in Form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        background: url("sampbg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-size: 22px;
+        color: black;
+      }
+
+      .main-nav {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      h2,
+      h3,
+      a {
+        color: #34495e;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .log {
+        padding-left: 10px;
+        padding-top: 5px;
+        margin-top: -25px;
+        position: fixed;
+      }
+
+      .logo {
+        margin: 0;
+        font-size: 1.45em;
+      }
+
+      .main-nav a {
+        padding: 10px 15px;
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+        color: #34495e;
+        font-size: 0.99em;
+      }
+
+      .main-nav a:hover {
+        color: #718daa;
+      }
+
+      .header {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        border: 1px solid #a2a2a2;
+        background-color: #f4f4f4;
+        -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      @media (min-width: 0px) {
+        .header,
+        .main-nav {
+          display: flex;
+        }
+
+        .header {
+          flex-direction: column;
+          align-items: center;
+
+          .header {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1150px;
+          }
+        }
+      }
+
+      @media (min-width: 0px) {
+        .header {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            margin-top: 10%;
+            color: white;
+            text-shadow: 2px 5px rgba(0, 0, 0, 0.797);
+        }
+
+        form {
+            margin-left: 36.5%;
+            margin-right: 36.5%;
+            font-size: 20px;
+        }
+
+        fieldset {
+            background-color: rgba(255, 255, 255, 0.577);
+        }
+
+        legend {
+            font-size: large;
+            background-color: rgba(0, 0, 0, 0.753);
+            border-radius: 50px;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: white;
+        }
+
+        input[type="text"] {
+            background-color: rgba(0, 0, 0, 0.477);
+            color: white;
+        }
+
+        input[type="password"] {
+            background-color: rgba(0, 0, 0, 0.477);
+            color: white;
+        }
+
+        button {
+            background-color: rgb(0, 0, 0);
+            border-radius: 50px;
+            width: 100px;
+            color: white;
+            font-size: 20px;
+            margin: auto;
+            margin-bottom: 30px;
+            box-shadow: 2px 5px rgba(0, 0, 0, 0.597);
+            border: solid black 2px;
+        }
+        .forgor {
+            font-size: 15px;
+            color:white
+        }
+        #end {
+            float: right;
+            margin-top: -20px;
+        }
+    </style>
+
+    <script>
+        function validate()
+        {
+            var email = document.getElementById("emailID").value
+            var password = document.getElementById("pass").value
+            var database = {"pr9@gmail.com":"pr9","abc@rediffmail.in":"abc123"};
+            var errors = []
+            if (!/^[a-zA-z0-9._%+-]+@[a-zA-z0-9.-]+\.[a-zA-z]{2,}$/.test(email)) {
+                errors.push("Please enter a valid Email !");
+                return false;
+            }
+            if(database[email]!=password)
+            {
+                errors.push("Invalid Email / Password!");
+            }
+            if(errors.length > 0)
+            {
+                alert(errors.join("\n"))
+                return false;
+            }
+            else {
+                alert("Login Successful !")
+                return true;
+            }
+            
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo">
+            <a href="Landing Page.html"><img src="geogoo.png" height="50vh" class="log" /></a>
+        </h1>
+        <ul class="main-nav">
+                <li><a href="Home Page.html">Home</a></li>
+                <li><a href="Sign In form.html">Sign in</a></li>
+                <li><a href="Sign Up Form.html">Sign Up</a></li>
+                <li><a href="Registration Form.html">Register</a></li>
+                <li><a href="QuizPage.js">Quiz</a></li>
+                <li><a href="FeedbackForm.html">Feedback</a></li>
+        </ul>
+    </header>
+    <h1><u>SIGN-IN FORM</u></h1>
+    <form action="">
+        <fieldset>
+            <legend>
+                <pre>Login Information</pre>
+            </legend>
+            <br />
+            <label for="emailID">Email:</label>
+            <input type="text" id="emailID" name="emailID" required>
+            <br /><br />
+            <label for="pass">Password:</label>
+            <input type="password" name="pass" id="pass" required>
+            <br /><br />
+            <button onclick=validate()>Submit</button>
+            <div id="end">
+            <a href="Sign Up Form.html" class="forgor">Not a user already? Sign up!</a><br/>
+            <a href="https://www.india.gov.in/user/password" class="forgor">Forgot your password?</a>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>

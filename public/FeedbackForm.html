@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="FeedbackForm.css">
+</head>
+
+<body>
+    <header class="header">
+      <h1 class="logo"><a href="Landing Page.html"><img src="geogoo.png" height="50vh" class="log"></a></h1>
+      <ul class="main-nav">
+        <li><a href="Home Page.html">Home</a></li>
+        <li><a href="Sign In form.html">Sign in</a></li>
+        <li><a href="Sign Up Form.html">Sign Up</a></li>
+        <li><a href="Registration Form.html">Register</a></li>
+        <li><a href="QuizPage.js">Quiz</a></li>
+        <li><a href="FeedbackForm.html">Feedback</a></li>
+      </ul>
+    </header>
+  <div class="feedback-container">
+    <h2><u>Feedback Form</u></h2>
+    <form id="feedback-form">
+      <div class="form-group">
+        <label for="satisfaction">How satisfied are you with the webpage content?</label>
+        <select id="satisfaction" required>
+          <option value="">Select</option>
+          <option value="Very satisfied">Very satisfied</option>
+          <option value="Satisfied">Satisfied</option>
+          <option value="Neutral">Neutral</option>
+          <option value="Dissatisfied">Dissatisfied</option>
+          <option value="Very dissatisfied">Very dissatisfied</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="designSatisfaction">How satisfied are you with the webpage design?</label>
+        <select id="designSatisfaction" required>
+          <option value="">Select</option>
+          <option value="Very satisfied">Very satisfied</option>
+          <option value="Satisfied">Satisfied</option>
+          <option value="Neutral">Neutral</option>
+          <option value="Dissatisfied">Dissatisfied</option>
+          <option value="Very dissatisfied">Very dissatisfied</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="difficulty">How did you find the difficulty level of the questions?</label>
+        <select id="difficulty" required>
+          <option value="">Select</option>
+          <option value="Too easy">Too easy</option>
+          <option value="Easy">Easy</option>
+          <option value="Moderate">Moderate</option>
+          <option value="Difficult">Difficult</option>
+          <option value="Too difficult">Too difficult</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="learn">How satisfied are you with the amount of knowledge you gained via this website?</label>
+        <select id="learn" required>
+          <option value="">Select</option>
+          <option value="Very satisfied">Very satisfied</option>
+          <option value="Satisfied">Satisfied</option>
+          <option value="Neutral">Neutral</option>
+          <option value="Dissatisfied">Dissatisfied</option>
+          <option value="Very dissatisfied">Very dissatisfied</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="comments">Any additional comments or suggestions?</label>
+        <textarea id="comments"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script src="FeedbackForm.js"></script>
+</body>
+
+</html>

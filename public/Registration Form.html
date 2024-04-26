@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        min-height: 100vh;
+        background: url("sampbg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-size: 22px;
+        color: black;
+      }
+
+      .main-nav {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      h2,
+      h3,
+      a {
+        color: #34495e;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .log {
+        padding-left: 10px;
+        padding-top: 5px;
+        margin-top: -25px;
+        position: fixed;
+      }
+
+      .logo {
+        margin: 0;
+        font-size: 1.45em;
+      }
+
+      .main-nav a {
+        padding: 10px 15px;
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+        color: #34495e;
+        font-size: 0.99em;
+      }
+
+      .main-nav a:hover {
+        color: #718daa;
+      }
+
+      .header {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        border: 1px solid #a2a2a2;
+        background-color: #f4f4f4;
+        -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      @media (min-width: 0px) {
+        .header,
+        .main-nav {
+          display: flex;
+        }
+
+        .header {
+          flex-direction: column;
+          align-items: center;
+
+          .header {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1150px;
+          }
+        }
+      }
+
+      @media (min-width: 0px) {
+        .header {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 40px;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 5px rgba(0, 0, 0, 0.797);
+      }
+
+      form {
+        margin-left: 34.5%;
+        margin-right: 34.5%;
+      }
+
+      fieldset {
+        background-color: rgba(255, 255, 255, 0.577);
+      }
+
+      legend {
+        font-size: large;
+        background-color: rgba(0, 0, 0, 0.753);
+        color: white;
+        border-radius: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      label {
+        color: black;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="date"],
+      input[type="checkbox"] {
+        background-color: rgba(0, 0, 0, 0.477);
+        color: white;
+      }
+
+      button {
+        background: black;
+        border-radius: 50px;
+        width: 150px;
+        color: white;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 30px;
+        box-shadow: 2px 5px rgba(0, 0, 0, 0.511);
+        border: solid black 2px;
+      }
+
+      textarea {
+        background-color: rgba(0, 0, 0, 0.477);
+        color: white;
+      }
+
+      .main-div {
+        margin-top: 100px;
+      }
+
+      #country,
+      #edqu {
+        background-color: rgba(0, 0, 0, 0.477);
+        color: white;
+      }
+    </style>
+    <script>
+      function authenticate() {
+        var email = document.getElementById("emailID").value;
+        var year = document.getElementById("yop").value;
+        var errors = [];
+        if (!/^[a-zA-z0-9._%+-]+@[a-zA-z0-9.-]+\.[a-zA-z]{2,}$/.test(email)) {
+          errors.push("Please enter a valid Email !");
+        }
+        if (!/^[12]{1}[0-9]{3}$/.test(year)) {
+          errors.push("Please enter valid Year of Passing !");
+        }
+        if (errors.length > 0) {
+          alert(errors.join("\n"));
+          return false;
+        }
+        else {
+          alert( "Registration Successful !" );
+          return true;
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="logo">
+        <a href="Landing Page.html"
+          ><img
+            src="geogoo.png"
+            height="50vh"
+            class="log"
+        /></a>
+      </h1>
+      <ul class="main-nav">
+                <li><a href="Home Page.html">Home</a></li>
+                <li><a href="Sign In form.html">Sign in</a></li>
+                <li><a href="Sign Up Form.html">Sign Up</a></li>
+                <li><a href="Registration Form.html">Register</a></li>
+                <li><a href="QuizPage.js">Quiz</a></li>
+                <li><a href="FeedbackForm.html">Feedback</a></li>
+      </ul>
+    </header>
+    <div class="main-div">
+      <h1><u>REGISTRATION FORM</u></h1>
+      <form id="frm" action="">
+        <fieldset>
+          <legend>
+            <pre>Personal Information</pre>
+          </legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <br /><br />
+          <label for="emailID">Email ID:</label>
+          <input type="text" id="emailID" name="emailID" required />
+          <br /><br />
+          <label for="dateOfBirth">Date of Birth:</label>
+          <input type="date" name="dateOfBirth" id="dateOfBirth" required />
+          <br /><br />
+          <label for="country">Country:</label>
+          <input list="browsers" id="country" name="country" required />
+          <datalist id="browsers">
+            <option value="India"></option>
+            <option value="China"></option>
+            <option value="Pakistan"></option>
+            <option value="USA"></option>
+            <option value="UK"></option>
+            <option value="Germany"></option>
+            <option value="North Korea"></option>
+          </datalist>
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend>
+            <pre>Educational Information</pre>
+          </legend>
+          <label for="edqu">Educational Qualification:</label>
+          <input list="degrees" name="edqu" id="edqu" required />
+          <datalist id="degrees">
+            <option value="Cleared 10th"></option>
+            <option value="Cleared 12th"></option>
+            <option value="Undergraduate"></option>
+            <option value="Postgraduate"></option>
+            <option value="Doctorate"></option>
+            <option value="None of the above"></option>
+          </datalist>
+
+          <br /><br />
+          <label for="edu">Name of current educational institution:</label>
+          <input type="text" name="edu" id="edu" required />
+          <br /><br />
+          <label for="yop">Year of passing:</label>
+          <input type="text" name="yop" id="yop" required />
+          <br /><br />
+                    <label for="terms">I allow my feedback to be used in development of the
+                      website:</label>
+                    <input type="checkbox" name="terms" id="terms" required />
+        </fieldset>
+        <br />
+        <button onclick=authenticate()>Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
